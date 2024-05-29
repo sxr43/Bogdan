@@ -1,0 +1,1 @@
+https://colorscheme.ru/#3G21Tw0w0w0w0
