@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Пример универсального JavaScript-кода</title>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.0);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+  </style>
+</head>
+<body>
+
+<button id="openModal">Открыть модальное окно</button>
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal">&times;</span>
+    <p>Пример модального окна. Здесь может быть любое содержимое.</p>
+  </div>
+</div>
+
+<script>
+  const openModalBtn = document.getElementById("openModal");
+  const modal = document.getElementById("myModal");
+  const closeModalBtn = document.getElementById("closeModal");
+
+  openModalBtn.addEventListener("click", () => {
+    modal.style.display = "block";
+  });
+
+  closeModalBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+</script>
+<ul class="menu-line">
+    <li><a href=oprosnik.html>Опросник</a></li>
+    <li><a href=Nasha_tsel.html>Наша цель</a></li>
+    <li><a href=Spetsialnosti.html>Специальности</a></li>
+    <li><a href=vyzu.html>Учебные заведения</a></li>
+    <li><a href="button.html">Окно</a></li>
+</ul>   
+</body>
+</html>
